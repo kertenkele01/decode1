@@ -6,6 +6,14 @@ app.use(express.json());
 
 const DECODO_TOKEN = process.env.DECODO_TOKEN;
 
+
+console.log("🔥 NEW SERVER VERSION LOADED");
+
+app.post("/scrape", (req, res) => {
+  console.log("SCRAPE HIT");
+  res.json({ ok: true });
+});
+
 /**
  * HEALTH CHECK
  */
